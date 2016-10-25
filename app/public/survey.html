@@ -1,195 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Survey Page</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Page</title>
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- Latest compiled and minified CSS & JS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Biryani:300|Heebo:300|Quicksand" rel="stylesheet">
 
-
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Biryani:300|Heebo:300|Quicksand" rel="stylesheet">
-
-    <style type="text/css">
-      body {font-family: 'Heebo', sans-serif;}
-      .btn-default {margin-bottom: 10px;}
-    </style>
-</head>
-<body>
-
-    <div class="container">
-
-
+        <style type="text/css">
+          body {font-family: 'Heebo', sans-serif;}
+          .btn-default {margin-bottom: 10px;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
             <h2 class="text-left"><span class=""></span>Survey Questions</h2>
             <hr>
-
-
-        <div class="row">
-            <div class="col-lg-12">
-
-                <!-- Reservation Page -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">About You</h4>
-                    </div>
-                    <div class="panel-body">
-
-                        <form role="form">
-
-                            <div class="form-group">
-                                <label for="">Name (Required)</label>
-                                <input type="text" class="form-control" id="reserve_name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">Link to Photo Image (Required)</label>
-                                <input type="text" class="form-control" id="reserve_phone">
-                            </div>
-
-                            <form>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Reservation Page -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">About You</h4>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
                                 <div class="form-group">
-                                  <h3>Question One</h3>
-                                  <h4>You try to treat others as you would like to be treated.</h4>
-                                  <select class="form-control" id="questionOne">
-                                    <span>placeholder=Select</span>
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
+                                    <label for="">Name (Required)</label>
+                                    <input type="text" class="form-control" id="friend-name">
                                 </div>
                                 <div class="form-group">
-                                  <h3>Question Two</h3>
-                                  <h4>You don't need to spend a lot of money to have fun.</h4>
-                                  <select class="form-control" id="questionTwo">
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
+                                    <label for="">Link to Photo Image (Required)</label>
+                                    <input type="text" class="form-control" id="friend-image">
                                 </div>
-                                <div class="form-group">
-                                  <h3>Question Three</h3>
-                                  <h4>You enjoy exploring, even if it's just a small town an hour away.</h4>
-                                  <select class="form-control" id="questionThree">
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
-                                </div>
-                                <div class="form-group">
-                                  <h3>Question Four</h3>
-                                  <h4>You aren't really that into sports.</h4>
-                                  <select class="form-control" id="questionFour">
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
-                                </div>
-                                <div class="form-group">
-                                  <h3>Question Five</h3>
-                                  <h4>You enjoy being outside in nature.</h4>
-                                  <select class="form-control" id="questionFive">
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
-                                </div>
-                                <div class="form-group">
-                                  <h3>Question Six</h3>
-                                  <h4>You prefer a few really close friends, instead of many acquaintances.</h4>
-                                  <select class="form-control" id="questionSix">
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
-                                </div>
-                                <div class="form-group">
-                                  <h3>Question Seven</h3>
-                                  <h4>You put others before yourself.</h4>
-                                  <select class="form-control" id="questionSeven">
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
-                                </div>
-                                <div class="form-group">
-                                  <h3>Question Eight</h3>
-                                  <h4>You enjoy staying home and reading a good book over going out to the bars.</h4>
-                                  <select class="form-control" id="questionEight">
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
-                                </div>
-                                <div class="form-group">
-                                  <h3>Question Nine</h3>
-                                  <h4>You love dogs.</h4>
-                                  <select class="form-control" id="questionNine">
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
-                                </div>
-                                <div class="form-group">
-                                  <h3>Question Ten</h3>
-                                  <h4>You believe that kindness is a very important trait.</h4>
-                                  <select class="form-control" id="questionTen">
-                                    <option>1 (strongly disagree)</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5 (strongly agree)</option>
-                                  </select>
-                                  <br>
-                                </div>
+                                <form>
+                                    <div class="form-group">
+                                      <h3>Question One</h3>
+                                      <h4>You try to treat others as you would like to be treated.</h4>
+                                      <select class="form-control" id="questionOne">
+                                        <span>placeholder=Select</span>
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                    <div class="form-group">
+                                      <h3>Question Two</h3>
+                                      <h4>You don't need to spend a lot of money to have fun.</h4>
+                                      <select class="form-control" id="questionTwo">
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                    <div class="form-group">
+                                      <h3>Question Three</h3>
+                                      <h4>You enjoy exploring, even if it's just a small town an hour away.</h4>
+                                      <select class="form-control" id="questionThree">
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                    <div class="form-group">
+                                      <h3>Question Four</h3>
+                                      <h4>You aren't really that into sports.</h4>
+                                      <select class="form-control" id="questionFour">
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                    <div class="form-group">
+                                      <h3>Question Five</h3>
+                                      <h4>You enjoy being outside in nature.</h4>
+                                      <select class="form-control" id="questionFive">
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                    <div class="form-group">
+                                      <h3>Question Six</h3>
+                                      <h4>You prefer a few really close friends, instead of many acquaintances.</h4>
+                                      <select class="form-control" id="questionSix">
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                    <div class="form-group">
+                                      <h3>Question Seven</h3>
+                                      <h4>You put others before yourself.</h4>
+                                      <select class="form-control" id="questionSeven">
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                    <div class="form-group">
+                                      <h3>Question Eight</h3>
+                                      <h4>You enjoy staying home and reading a good book over going out to the bars.</h4>
+                                      <select class="form-control" id="questionEight">
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                    <div class="form-group">
+                                      <h3>Question Nine</h3>
+                                      <h4>You love dogs.</h4>
+                                      <select class="form-control" id="questionNine">
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                    <div class="form-group">
+                                      <h3>Question Ten</h3>
+                                      <h4>You believe that kindness is a very important trait.</h4>
+                                      <select class="form-control" id="questionTen">
+                                        <option>1 (strongly disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (strongly agree)</option>
+                                      </select>
+                                      <br>
+                                    </div>
+                                </form>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" id="surveySubmitBtn"><span class="glyphicon glyphicon-ok"></span>  Submit</button>
                             </form>
-
-                            <button type="submit" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span>  Submit</button>
-                        </form>
-
+                        </div>
                     </div>
                 </div>
-
             </div>
+            <footer class="footer">
+                <div class="container">
+                    <p><a href="/api/tables">API Friends List</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p>
+                </div>
+            </footer>
         </div>
-
-
-        <footer class="footer">
-            <div class="container">
-                <p><a href="/api/tables">API Friends List</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p>
-            </div>
-        </footer>
-
-    </div>
-
-</body>
+        <!-- Javascript -->
+        <script type="text/javascript" src="../data/friends.js"></script>
+    </body>
 </html>
