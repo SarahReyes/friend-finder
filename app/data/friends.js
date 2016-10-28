@@ -1,6 +1,6 @@
 
 
-var totalDifference = 0;
+var lowestDiffFriend = "";
 
 // hard code some 'friends' to compare with the user
 var friends = [
@@ -79,22 +79,36 @@ $('#surveySubmitBtn').on('click', function(){
     console.log(JSON.stringify(newFriend));
 
 
+    var bestFriend = {
+        name: "",
+        photo: "",
+        diffScore: 50
+    };
+
     friends.forEach(function(friend){
+
+        var totalDifference = 0;
+
         for (var prop in friend.scores) {
             console.log("This is the key: " + prop + " This is the value: " + friend.scores[prop]);
             console.log(newFriend.scores[prop]);
+
+            totalDifference += Math.abs(newFriend.scores[prop] - friend.scores[prop]);
+
+            if (totalDifference < bestFriend.diffScore) {
+                bestFriend.name = friend.name;
+                bestFriend.photo = friend.photo;
+                bestFriend.diffScore = totalDifference;
+            }
+
         }
     });
+    console.log(bestFriend);
+    $('.modal').modal('show');
+    $('.modal').on('shown.bs.modal', function () {
+        $('.col-md-4').html(bestFriend.name);
+        $('.col-md-3 col-md-offset-3').attr('src', bestFriend.photo);
 
 
+    });
 });
-
-// to compare
-// loop through their scores for all the friends in var 'friends'
-// compare the score var friends, against the one you got back
-// var totalDiff = 0;
-// friends.each do |friend|
-//   friend.scores.each do |key, value|
-//     totalDiff = totalDiff + Math.abs(newFriend.scores[key] - value)
-//   end
-//end
