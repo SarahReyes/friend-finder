@@ -6,7 +6,7 @@ var lowestDiffFriend = "";
 var friends = [
     {
         name: 'Pam',
-        photo: 'images/pam-pic.jpg',
+        photo: '../data/images/pam-pic.jpg',
         scores: {
             qone: 5,
             qtwo: 4,
@@ -22,7 +22,7 @@ var friends = [
     },
     {
         name: 'Dwight',
-        photo: 'images/dwight-pic.jpg',
+        photo: '../data/images/dwight-pic.jpg',
         scores: {
             qone: 1,
             qtwo: 5,
@@ -38,7 +38,7 @@ var friends = [
     },
     {
         name: 'Stanley',
-        photo: 'images/stanley-pic.jpg',
+        photo: '../data/images/stanley-pic.png',
         scores: {
             qone: 3,
             qtwo: 5,
@@ -106,9 +106,7 @@ $('#surveySubmitBtn').on('click', function(){
     console.log(bestFriend);
     $('.modal').modal('show');
     $('.modal').on('shown.bs.modal', function () {
-        $('.col-md-4').html(bestFriend.name);
-        $('.col-md-3 col-md-offset-3').attr('src', bestFriend.photo);
-
-
+        $('#friendName').html(bestFriend.name);
+        $('#friendPic').attr('src', bestFriend.photo);
     });
 });

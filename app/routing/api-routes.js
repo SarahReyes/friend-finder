@@ -25,9 +25,8 @@ module.exports = function (app) {
 	});
 
 
-
-	app.post('/api/tables', function (req, res) {
-        // This route will be used to handle the compatibility logic.
-	});
+	// DO WE NEED THIS???
+	// app.post('/api/friends', function (req, res) {
+	// });
 
 };
