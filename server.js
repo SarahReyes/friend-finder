@@ -1,13 +1,17 @@
 
 // require the npm packages
+
+// var $ = jQuery = require('jquery')(window);
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 
+
 // tell node we're creating an express server
 var app = express();
 // set the port
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 // take the info posted in our application so it can be understood in JS
 app.use(bodyParser.json());
